@@ -1,0 +1,12 @@
+fastapi==0.112.0
+uvicorn==0.30.5
+SQLAlchemy==2.0.32
+SQLAlchemy-Utils==0.41.2
+pydantic==2.8.2
+pydantic_core==2.20.1
+email_validator==2.2.0
+python-dotenv==1.0.1
+starlette==0.37.2
+typing_extensions==4.12.2
+requests==2.32.3
+

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend-api
+    container_name: backend
+    ports:
+      - "8000:8000"
+    networks:
+      - proyecto-net
+
+  frontend:
+    build: ./frontend-flask
+    container_name: frontend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+    networks:
+      - proyecto-net
+    environment:
+      - BACKEND_URL=http://backend:8000
+
+networks:
+  proyecto-net:
+    driver: bridge
